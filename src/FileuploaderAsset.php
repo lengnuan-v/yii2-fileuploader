@@ -33,7 +33,6 @@ class FileuploaderAsset extends AssetBundle
      */
     public $js = [
         'js/jquery.filer.js',
-        'js/jquery.script.js',
     ];
 
 }
