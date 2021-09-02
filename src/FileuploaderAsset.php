@@ -25,7 +25,6 @@ class FileuploaderAsset extends AssetBundle
         'css/jquery-filer.css',
         'css/jquery.filer.css',
         'css/jquery.filer-dragdropbox.css',
-        'css/chromagallery.min.css',
     ];
 
 
@@ -34,7 +33,6 @@ class FileuploaderAsset extends AssetBundle
      */
     public $js = [
         'js/jquery.filer.js',
-        'js/chromagallery.pkgd.min.js',
     ];
 
 }
