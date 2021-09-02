@@ -1,0 +1,21 @@
+{
+    "name": "lengnuan-v/yii2-fileuploader",
+    "description": "yii2, fileuploader, jQuery, filer",
+    "type": "yii2-extension",
+    "keywords": ["yii2"," fileuploader"," jQuery"," filer"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "lengnuan",
+            "email": "25314666@qq.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "lengnuan\\fileuploader\\": "src"
+        }
+    }
+}
