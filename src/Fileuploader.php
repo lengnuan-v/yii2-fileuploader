@@ -70,7 +70,14 @@ class Fileuploader extends InputWidget
 
         $_view->registerJs("
             $(document).ready(function() {
-                $('#$this->id').filer($cofig)
+                $('#$this->id').filer($cofig);
+		$(".jFiler-item-thumb-image").chromaGallery({
+			color:'#000',
+			gridMargin:15,
+			maxColumns:5,
+			dof:true,
+			screenOpacity:0.8
+		    });
             });
         ");
     }
