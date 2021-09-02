@@ -154,7 +154,6 @@ class Fileuploader extends InputWidget
     private function uploadSuccess()
     {
        return new JsExpression("function(data, el, jqXHR){
-console.log(data)
             var parent = el.find('.jFiler-jProgressBar').parent();
             if (data.error) {
                 el.find('.jFiler-jProgressBar').fadeOut('slow', function(){
