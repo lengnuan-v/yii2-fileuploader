@@ -1,10 +1,3 @@
-/*!
- * jQuery.filer
- * Copyright (c) 2015 CreativeDream
- * Website: https://github.com/CreativeDream/jquery.filer
- * Version: 1.0.4 (03-Nov-2015)
- * Requires: jQuery v1.7.1 or later
- */
 (function($) {
 	"use strict";
 	$.fn.filer = function(q) {
@@ -304,7 +297,7 @@
 								return false;
 							}
 							if(file.file && opts.type == "image") {
-								var g = '<img src="' + file.file + '" draggable="false" />',
+								var g = '<img class="cursor" onclick="getImg(\'' + file.file + '\')" src="' + file.file + '" draggable="false" />',
 									m = html.find('.jFiler-item-thumb-image.fi-loading');
 								$(g)
 									.on("error",function() {
@@ -322,7 +315,7 @@
 							if(window.File && window.FileList && window.FileReader && opts.type == "image" && opts.size < 6e+6) {
 								var y = new FileReader;
 								y.onload = function(e) {
-									var g = '<img src="' + e.target.result + '" draggable="false" />',
+									var g = '<img class="cursor" onclick="getImg(\'' + e.target.result + '\')" src="' + e.target.result + '" draggable="false" />',
 										m = html.find('.jFiler-item-thumb-image.fi-loading');
 									$(g)
 										.on("error",function() {
@@ -972,4 +965,18 @@
 			}
 		}
 	}
+
 })(jQuery);
+
+function getImg(imgsrc) {
+	var opacityBottom = '<div class="jFiler-item-thumb-opacity-bottom" style = "display:none"><img class="jFiler-item-thumb-big-image" src="' + imgsrc + '"></div>';
+	$(document.body).append(opacityBottom);
+	$(".jFiler-item-thumb-opacity-bottom").addClass("opacityBottom");
+	$(".jFiler-item-thumb-opacity-bottom").show();
+	$("html,body").addClass("none-scroll");
+	$(".jFiler-item-thumb-big-image").addClass("jFiler-item-thumb-big-image");
+	$(".jFiler-item-thumb-opacity-bottom").click(function () {
+		$("html,body").removeClass("none-scroll");
+		$(".jFiler-item-thumb-opacity-bottom").remove();
+	});
+}
