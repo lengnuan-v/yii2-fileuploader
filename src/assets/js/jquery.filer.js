@@ -272,7 +272,7 @@
 										type: type,
 										extension: ext
 									}),
-									image: '<div class="chroma-gallery jFiler-item-thumb-image fi-loading"></div>',
+									image: '<div class="jFiler-item-thumb-image fi-loading"></div>',
 									progressBar: progressBar,
 									_appended: file._appended
 								},
@@ -304,7 +304,7 @@
 								return false;
 							}
 							if(file.file && opts.type == "image") {
-								var g = '<img data-largesrc="' + file.file + '" src="' + file.file + '" draggable="false" />',
+								var g = '<img src="' + file.file + '" draggable="false" />',
 									m = html.find('.jFiler-item-thumb-image.fi-loading');
 								$(g)
 									.on("error",function() {
@@ -322,7 +322,7 @@
 							if(window.File && window.FileList && window.FileReader && opts.type == "image" && opts.size < 6e+6) {
 								var y = new FileReader;
 								y.onload = function(e) {
-									var g = '<img data-largesrc="' + e.target.result + '" src="' + e.target.result + '" draggable="false" />',
+									var g = '<img src="' + e.target.result + '" draggable="false" />',
 										m = html.find('.jFiler-item-thumb-image.fi-loading');
 									$(g)
 										.on("error",function() {
