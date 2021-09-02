@@ -994,3 +994,4 @@ function toBigImg() {
         $("html,body").removeClass("none-scroll");
         $(".opacityBottom").remove();
     });
+}
