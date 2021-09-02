@@ -166,7 +166,7 @@ class Fileuploader extends InputWidget
                     } else {
                         el.find('.jFiler-item-title').attr('title', data['name']).text(data['name']);
                     }
-                    el.find('.jFiler-item-thumb-image img').attr('src', data['url']);
+                    el.find('.jFiler-item-thumb-image img').attr('src', data['url']).attr('data-largesrc', data['url']);
                     $('.jFiler.jFiler-theme-default').after('<input type=\"hidden\" class=\"form-control\" name=\"$this->name\" {$this->id}-id=\"' + el[0].jfiler_id + '\" value=\"' + data['filename'] + '\">');
                     el.find('.jFiler-jProgressBar').fadeOut('slow', function(){
                         $('<div class=\"jFiler-item-others text-success ml-1\"><i class=\"icon-jfi-check-circle\"></i> Success</div>').hide().appendTo(parent).fadeIn('slow');    
