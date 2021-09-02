@@ -973,7 +973,7 @@
 		}
 	}
 	
-	$('img').click(function () {
+	$('.jFiler-item-thumb-image img').click(function () {
 	    //获取图片路径
 	    var imgsrc = $(this).attr("src");
 	    console.log(imgsrc);
