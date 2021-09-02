@@ -272,7 +272,7 @@
 										type: type,
 										extension: ext
 									}),
-									image: '<div class="jFiler-item-thumb-image fi-loading"></div>',
+									image: '<div class="chroma-gallery jFiler-item-thumb-image fi-loading"></div>',
 									progressBar: progressBar,
 									_appended: file._appended
 								},
